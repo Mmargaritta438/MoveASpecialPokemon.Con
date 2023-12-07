@@ -1,0 +1,6 @@
+@MoveASpecialPokemon.Con_HostAddress = http://localhost:5200
+
+GET {{MoveASpecialPokemon.Con_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
