@@ -17,3 +17,78 @@
 5.Сделать так, чтобы ПОКЕМОНЫ Обладал Своей Силой;
 6.Создать Место Обитание ПОКЕМОНОВ;
 7.Добавлять AПГРЕЙД каждому ПОКЕМОНУ.)))
+
+
+
+
+
+
+
+
+
+~~~~~~~
+~~~~
+
+      Подключиться к базе данных)
+
+
+
+~~~
+~~~~
+~~~~
+~~~~~~~~
+~~~~~~~~~~~~
+
+
+••Первое соединить приложение с самой базой, через MYSQL connector;
+
+ ••Создать первый класс который будет описывать работу с базой данных;
+ 
+••В этом классе базе данных прописать строку, которая будет подключаться к удалённой базе;
+ 
+••То есть, мы обращаемся к классу MYSQL connector, в ней будет некий объект Connection этого класса;
+ 
+••Плюс, все параметры прописывать в строку и в ней будет находиться все характеристики по поводу подключения хост (имя пользователь(пароль) и имя базы данных + порт;
+ 
+••Перед этим прописать сервер (SERVER) данные в PHP ( Post, Host, User, Password )  
+ 
+••В сервере указать параметры Data Base, 
+ 
+••В ней указать название после того,
+как сама база данных, уже будет создана
+ 
+••В самой базе данных создать таблицы, таблица будет состоять из трех полей - это уникальный идентификатор
+логин пароль (ID, LOGIN, PASS), то есть
+ 
+••В одной таблице будет перечислены все пользователи;
+
+ ••В итоге это  переменная содержания всю
+информацию, по поводу перемещения в базе данных, но без параметров функции
+будет проверять объект Connection проверка его состояния.
+
+ ••Или состояние базы данных сейчас  ещё плюс две функции закрытия соединения и открытия соединения базы данных 
+то обращение к объекту Connection и функции Open Type (открытие соединения с базой) и  наоборот, если соединение с базой данных, то используя функцию Close, (которая позволит закрывать и завершать работу базы данных)
+
+• •А также и  функции возвращения (возвращается само соединение с базой данных и возвращает определённый объект) то, есть объект, ещё с классом Connection объект  этот объект говорит с какой базой мы работаем, после этого авторизует пользователя через базу данных и регистрируем пользователей игра особенного ПОКЕМОНА.
+
+
+
+
+The first is to connect the application to the database itself, via the MYSQL connector; 
+
+Create the first class that will describe working with the database;
+
+ In this database class, enter a line that will connect to a remote database; 
+
+ That is, we access the MYSQL connector class, it will contain a certain Connection object of this class;
+
+Plus, write all the parameters in a line and it will contain all the characteristics regarding the host connection (username (password) and database name + port;
+
+ Before this, register the server (SERVER) data in PHP (Post, Host, User, Password) 
+
+ In the server, specify the Data Base parameters, In it indicate the name after the database itself will already be created Create tables in the database itself, the table will consist of three fields - this is a unique identifier login password (ID, LOGIN, PASS), that is One table will list all users;
+
+ As a result, this is the entire content variable information about moving in the database, but without function parameters will check the Connection object to check its state.
+ Or the state of the database now plus two functions for closing a connection and opening a database connection then accessing the Connection object and the Open Type function (opening a connection with the database) and vice versa, if the connection is with a database, then using the Close function (which will allow you to close and shut down the database)
+
+ And also the return functions (the connection with the database itself is returned and returns a specific object), that is, an object, even with the Connection class, this object says which database we are working with, after that it authorizes the user through the database and registers users for the game of a special POKEMON.
