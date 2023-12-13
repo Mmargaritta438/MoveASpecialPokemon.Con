@@ -14,7 +14,7 @@ namespace MoveASpecialPokemon
 
             var playergametwo = new COMEPlayerGame("AI PLAYER TWO");
 
-            playergameone.Party = new List<BeastMonster>
+            playergameone.Party = new List<FightMonster>
             {
 
             };

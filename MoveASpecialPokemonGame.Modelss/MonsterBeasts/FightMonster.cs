@@ -1,8 +1,9 @@
-﻿using System;
+﻿using MoveASpecialPokemonGame.Modelss.HoldStills;
+using System;
 
 namespace MoveASpecialPokemonGame.Modelss.MonsterBeasts
 {
-    public abstract class BeastMonster
+    public class FightMonster : IIdentifiablee
     {
         /// <summary>
         /// SpecialPukemon Number
@@ -10,12 +11,17 @@ namespace MoveASpecialPokemonGame.Modelss.MonsterBeasts
         public int Id { get; set; }
 
         /// <summary>
+        /// Experience Level
+        /// </summary>
+        public int Level { get; set; }  
+
+        /// <summary>
         /// SpecialPokemon Kind
         /// </summary>
         public BeastMonsterKind Kind { get; set; }
 
         /// <summary>
-        /// BeastMonster's Name
+        /// FightMonster's Name
         /// </summary>
         public string Name { get; set; }
 
@@ -46,5 +52,22 @@ namespace MoveASpecialPokemonGame.Modelss.MonsterBeasts
         ///-- NOTE: When learning a STH hold still, it actually need to replace
         ///-- one of the existing four hold stills.
         public virtual IList<HoldStills.FightHoldStill> HoldStillList { get; set; }
+     
+        public FightMonster(int id, string name, BeastMonsterKind kind, int hP, int attack, int defence, int speed, IList<HoldStills.FightHoldStill> holdStillList)
+        {
+            Id = id;
+            Kind = kind;
+            Name = name ?? throw new ArgumentNullException(nameof(Name));   
+            HP = hP;
+            Attack = attack;
+            Defence = defence;
+            Speed = speed;
+            if (holdStillList == null || holdStillList.Count == 0)
+                holdStillList = new List<FightHoldStill> { new Struggle() };
+
+            HoldStillList = holdStillList;
+        }
+
     }
 }
+

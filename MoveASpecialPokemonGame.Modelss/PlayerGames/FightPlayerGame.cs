@@ -10,6 +10,6 @@ namespace MoveASpecialPokemonGame.Modelss.PlayerGames
         /// Current party of speacial pokemon. Max of six and needs controls/restrictions
         /// for swapping new special pokemon with existing.
         /// </summary>
-        public virtual IList<MonsterBeasts.BeastMonster> Party { get; set; }
+        public virtual IList<MonsterBeasts.FightMonster> Party { get; set; }
     }
 }
